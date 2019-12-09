@@ -21,6 +21,10 @@
   }
 }
 
+.gform_validation_container {
+  @apply hidden;
+}
+
 #gform_wrapper_1 {
   @apply px-4 w-full;
   .gfield {
