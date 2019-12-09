@@ -1,0 +1,50 @@
+.nav-primary {
+  @apply flex flex-col;
+  & li:last-child {
+    @apply pb-6;
+  }
+  li {
+    @apply py-4;
+  }
+  .current-menu-item a{
+    @apply text-s-yellow;
+  }
+  a {
+    @apply uppercase font-roboto font-medium text-s-stone px-6 py-4 text-base tracking-widest;
+    &:hover {
+      @apply text-s-yellow;
+    }
+  }
+}
+
+.search-form {
+  @apply flex items-center justify-center;
+  label {
+    @apply mb-0;
+  }
+  .search-input {
+    &::placeholder {
+      @apply text-s-stone opacity-75;
+    }
+  }
+}
+
+@screen md {
+  .nav-primary {
+    @apply flex flex-row items-center;
+    & li:last-child {
+      @apply pr-0 pb-4;
+    }
+    a {
+      @apply px-3 text-sm;
+    }
+  }
+}
+
+@screen lg {
+  .nav-primary {
+    a {
+      @apply text-base px-6;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+// Global styles are set in the Tailwind config using a plugin
+html {
+  @apply text-s-dark font-roboto;
+}
+
+p {
+  @apply text-s-dark;
+}
+
+h3 {
+  @apply text-3xl font-bold tracking-wider leading-none;
+}
+
+@screen md {
+  h3 {
+    @apply text-5xl;
+  }
+}
+
+.page-content {
+  p {
+    @apply mb-6 tracking-wide leading-normal;
+  }
+  .wp-block-image {
+    @apply mb-6;
+  }
+}
+
+a {
+  @apply cursor-pointer;
+}

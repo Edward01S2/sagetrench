@@ -1,0 +1,192 @@
+//Homepage
+.about-content {
+  h3 {
+    @apply text-xl leading-tight font-medium pb-4 tracking-wide;
+  }
+  p {
+    @apply text-s-stone tracking-normal leading-normal;
+  }
+}
+
+@screen md {
+  .about-content {
+    h3 {
+      @apply text-4xl leading-tight font-medium pb-8 tracking-wide;
+    }
+    p {
+      @apply text-s-stone tracking-normal leading-loose;
+    }
+  }
+}
+
+@screen md {
+  #service-item {
+    &:nth-child(even) {
+      img {
+        @apply order-2;
+      }
+      div {
+        @apply order-1 pl-0 pr-8;
+      }
+    }
+  }
+}
+
+@screen lg {
+  #service-item {
+    &:nth-child(even) {
+      div {
+        @apply pr-12;
+      }
+    }
+  }
+}
+
+
+//Contact Page
+.contact-location {
+  h3 {
+    @apply text-lg font-medium leading-normal;
+  }
+}
+
+@screen lg {
+  .contact-location {
+    @apply text-lg;
+    h3 {
+      @apply text-xl;
+    }
+  }
+}
+
+.contact-content {
+  @apply px-8 text-center pb-8;
+  h3 {
+    @apply text-xl leading-normal pb-4;
+  }
+  a {
+    @apply underline;
+    &:hover {
+      @apply text-s-yellow;
+    }
+  }
+}
+
+@screen md {
+  .contact-content {
+    h3 {
+      @apply text-2xl px-12;
+    }
+  }
+}
+
+@screen xl {
+  .contact-content {
+    h3 {
+      @apply text-3xl px-12;
+    }
+  }
+}
+
+
+//Single Career Page
+.career-content {
+  h3 {
+    @apply text-lg font-medium tracking-wider py-4 leading-tight;
+  }
+  p {
+    @apply mb-4 leading-normal tracking-wide;
+  }
+  ul {
+    @apply list-disc mb-4 pl-4;
+    li {
+      @apply mb-2;
+    }
+  }
+}
+
+
+//Career Archive Page
+.career-arc-content {
+  @apply px-8 py-12;
+  h3 {
+    @apply text-xl text-s-yellow font-medium leading-tight mb-4;
+  }
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@screen xl {
+  .career-arc-content {
+    h3 {
+      @apply text-2xl;
+    }
+    p {
+      @apply text-lg;
+    }
+  }
+}
+
+//Product Single Page
+.product-content {
+  h3 {
+    @apply text-lg font-medium tracking-wider py-4 leading-tight;
+  }
+  p {
+    @apply mb-4 leading-normal tracking-wide;
+  }
+  ul {
+    @apply list-disc mb-4 pl-4;
+    li {
+      @apply mb-2;
+    }
+  }
+  a {
+    @apply underline;
+  }
+}
+
+.product-phone {
+  @apply text-2xl font-medium tracking-wide;
+}
+
+@screen lg{
+  .product-phone {
+    @apply text-3xl;
+  }
+}
+
+//Product Archive
+@screen md {
+  .product-container {
+    h3 {
+      @apply flex items-center;
+      span {
+        @apply bg-white mr-4;
+      }
+      &:after {
+        @apply bg-s-yellow h-1;
+        flex: 1;
+        content: '',
+      }
+    }
+  }
+}
+
+.entry-summary {
+  p {
+    @apply leading-relaxed;
+  }
+  a {
+    @apply underline;
+  }
+}
+
+.search-results {
+  article {
+    @apply pb-8;
+  }
+}
+
+
