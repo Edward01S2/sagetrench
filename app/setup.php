@@ -32,6 +32,13 @@ add_action('after_setup_theme', function () {
     add_theme_support('soil-nav-walker');
     add_theme_support('soil-nice-search');
     add_theme_support('soil-relative-urls');
+    add_theme_support('soil-disable-rest-api');
+    add_theme_support('soil-disable-asset-versioning');
+    add_theme_support('soil-disable-trackbacks');
+    add_theme_support('soil-js-to-footer');
+    if(get_field($options_page->acf_options['google_analytics'])) {
+        add_theme_support('soil-google-analytics', $options_page->acf_options['google_analytics']);
+    }
 
     /**
      * Enable plugins to manage the document title
@@ -71,15 +78,6 @@ add_action('after_setup_theme', function () {
      */
     add_editor_style(asset_path('styles/main.css'));
 }, 20);
-
-add_theme_support('soil-clean-up');
-add_theme_support('soil-disable-rest-api');
-add_theme_support('soil-disable-asset-versioning');
-add_theme_support('soil-disable-trackbacks');
-add_theme_support('soil-google-analytics', 'UA-XXXXX-Y');
-add_theme_support('soil-js-to-footer');
-add_theme_support('soil-nice-search');
-add_theme_support('soil-relative-urls');
 
 /**
  * Register sidebars
