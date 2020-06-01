@@ -63,7 +63,6 @@
           <h2 class="text-3xl md:text-5xl uppercase font-bold tracking-wider leading-none pb-4">{!! $contact_title !!}</h2>
           <p class="text-base px-8 text-center pb-8 md:text-xl lg:text-2xl">{!! $contact_content !!}</p>
           @php
-            gravity_form_enqueue_scripts($form->id, true);
             gravity_form($form->id, false, false, false, '', true, 1);
           @endphp
         </div>

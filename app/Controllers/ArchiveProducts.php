@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use Sober\Controller\Controller;
 
-class ArchiveProduct extends Controller
+class ArchiveProducts extends Controller
 {
 
   public function products() {
@@ -16,7 +16,7 @@ class ArchiveProduct extends Controller
         'category_name' => $cat->slug,
         'post_status' => 'publish',
         'posts_per_page' => -1,
-        'post_type' => 'product',
+        'post_type' => 'products',
       ];
 
       $query = new \WP_Query($args);
