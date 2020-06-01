@@ -32,8 +32,8 @@
     <div class="" style="background-image: -webkit-linear-gradient(165deg, #f8c12c 27%, #f7eee2 27%);">
       <div class="container mx-auto">
         <div class="flex flex-col items-center py-16 pb-12 md:py-20 md:pb-16 lg:py-24 lg:pb-20">
-          <h2 class="text-3xl md:text-5xl uppercase font-bold tracking-wider leading-none">{!! $product_title !!}</h2>
-            <div class="flex flex-col w-full justify-center pt-12 md:flex-row">
+          <h2 class="text-3xl md:text-5xl uppercase font-bold tracking-wider leading-none mb-8">{!! $product_title !!}</h2>
+            <div class="grid grid-cols-1 gap-8 px-8 md:grid-cols-2 xl:grid-cols-3 xl:px-0">
               @foreach($products as $product)
                 @include('partials.product-item', $product)
               @endforeach

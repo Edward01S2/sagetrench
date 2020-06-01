@@ -10,37 +10,26 @@
       </div>
     </section>
 
-  <div class="container mx-auto product-container">
-    <a id="shoring-systems"></a>
-    <div class="px-4 lg:px-0">
-      <h3 class="uppercase text-s-yellow text-center py-8 font-medium text-3xl md:px-4 lg:pt-16 lg:pb-12"><span>Shoring Systems</span></h3>
-      <div class="flex flex-col md:flex-row md:flex-wrap">
-        @foreach($shoring_loop as $shore)
-          <a class="px-8 md:w-1/3 md:px-4 lg:w-1/4" href="{!! $shore['link'] !!}">
-            <div class="mb-8 group">
-              <img class="pb-4 group-hover:opacity-75" src="{!! $shore['image'] !!}" alt="">
-              <p class="uppercase text-center font-medium tracking-wide group-hover:text-s-yellow">{!! $shore['name'] !!}</p>
-            </div>
-          </a>
-        @endforeach
-      </div>
-    </div>
+  <div class="container mx-auto px-8 pb-12 sm:px-6 md:pb-16 lg:pb-20 lg:px-8 product-container">
 
-    <a id="trench-sheets"></a>
-    <div class="px-4 lg:px-0">
-      <h3 class="uppercase text-s-yellow text-center py-8 font-medium text-3xl md:px-4 lg:pt-16 lg:pb-12"><span>Trench Sheets</span></h3>
-      <div class="flex flex-col md:flex-row md:flex-wrap">
-        @foreach($trench_loop as $shore)
-          <a class="px-8 md:w-1/3 md:px-4 lg:w-1/4" href="{!! $shore['link'] !!}">
-            <div class="mb-8 group">
-              <img class="pb-4 group-hover:opacity-75" src="{!! $shore['image'] !!}" alt="">
+    @foreach($products as $post)
+    <div id="{!! $post['slug'] !!}" class="invisible block relative pt-12 -mt-12"></div>
+    <div class="lg:px-0">
+      <h3 class="uppercase text-s-yellow text-center py-8 font-medium text-3xl lg:pt-16 lg:pb-12"><span>{!! $post['name'] !!}</span></h3>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {{-- @dump($post['posts']) --}}
+        @foreach($post['posts'] as $shore)
+          <a class="" href="{!! $shore['link'] !!}">
+            <div class="group">
+              <img class="pb-4 object-cover h-72 object-center w-full group-hover:opacity-75" src="{!! $shore['image'] !!}" alt="">
               <p class="uppercase text-center font-medium tracking-wide group-hover:text-s-yellow">{!! $shore['name'] !!}</p>
             </div>
           </a>
         @endforeach
       </div>
     </div>
- 
+    @endforeach
+
   </div>
 
   <div class="bg-s-yellow">
@@ -49,4 +38,5 @@
     </div>
   </div>
   {{-- @debug --}}
+  {{-- @dump($products) --}}
 @endsection

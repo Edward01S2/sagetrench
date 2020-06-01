@@ -1,12 +1,14 @@
-<div class="px-8 pb-8 md:px-4">
-  <a class="md:w-1/2" href="{!! $button["url"] !!}">
+<div class="">
+  <a class="" href="/product/#{!! $cat->slug !!}">
     <div class="group">
-      <img class="z-0 relative group-hover:opacity-75" src="{!! $image["url"] !!}" alt=""/>
-      <a href="{!! $button["url"] !!}">
-        <div class="text-center bg-s-dark w-3/4 mx-auto text-white uppercase py-2 tracking-widest font-medium -mt-4 z-10 relative group-hover:bg-s-stone group-hover:text-s-yellow lg:w-1/2">
-          {!! $button["title"] !!}
+      <img class="z-0 relative group-hover:opacity-75 object-cover object-center h-48 w-full lg:h-64" src="{!! $image["url"] !!}" alt=""/>
+      <a class="block px-8 lg:px-12" href="/product/#{!! $cat->slug !!}">
+        <div class="text-center bg-s-dark text-white uppercase px-4 py-2 tracking-widest font-medium -mt-4 z-10 relative group-hover:bg-s-stone group-hover:text-s-yellow">
+          {!! $cat->name !!}
         </div>
       </a>
     </div>
   </a>
 </div>
+
+{{-- @dump($cat) --}}

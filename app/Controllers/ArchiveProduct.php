@@ -7,37 +7,39 @@ use Sober\Controller\Controller;
 class ArchiveProduct extends Controller
 {
 
-  public function shoringLoop() {
-    $shores = get_posts([
+  public function products() {
+    $cats = get_terms('category');
+    
+    $data = [];
+    foreach($cats as $cat) {
+      $args = [
+        'category_name' => $cat->slug,
+        'post_status' => 'publish',
+        'posts_per_page' => -1,
         'post_type' => 'product',
-        'posts_per_page'=>'-1',
-        'category_name' => 'shoring',
-        'order' => 'ASC',
-    ]);
-
-    return array_map(function ($post) {
-      return [
-        'name' => get_the_title($post->ID),
-        'image' => get_the_post_thumbnail_url($post->ID),
-        'link' => get_permalink($post->ID),
       ];
-    }, $shores);
+
+      $query = new \WP_Query($args);
+      $posts = $query->posts;
+      $data[$cat->name]['name'] = $cat->name;
+      $data[$cat->name]['slug'] = $cat->slug; 
+      foreach($posts as $post) {
+        setup_postdata($post);
+          $data[$cat->name]['posts'][] = [
+            'name' => get_the_title($post->ID),
+            'link' => get_the_permalink($post->ID),
+            'image' => get_the_post_thumbnail_url($post->ID),
+          ];
+
+
+        wp_reset_postdata();
+      }
+
+
+    }
+
+    return $data;
+
   }
 
-  public function trenchLoop() {
-    $trenches = get_posts([
-        'post_type' => 'product',
-        'posts_per_page'=>'-1',
-        'category_name' => 'trench',
-        'order' => 'ASC',
-    ]);
-
-    return array_map(function ($post) {
-      return [
-        'name' => get_the_title($post->ID),
-        'image' => get_the_post_thumbnail_url($post->ID),
-        'link' => get_permalink($post->ID),
-      ];
-    }, $trenches);
-  }
 }

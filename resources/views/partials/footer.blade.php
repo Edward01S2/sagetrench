@@ -14,4 +14,5 @@
       <p class="text-white pb-4 tracking-wide">{!!$options_page->acf_options['copy']!!} <?php echo date("Y"); ?></p>
     </div>
   </div>
+  {!! $options_page->acf_options['footer_scripts'] !!}
 </footer>
