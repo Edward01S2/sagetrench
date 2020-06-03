@@ -17,6 +17,17 @@ h3 {
   }
 }
 
+.product-content {
+  ul {
+    @apply list-disc;
+  }
+  li {
+    ul {
+      @apply ml-4;
+    }
+  }
+}
+
 .page-content {
   p {
     @apply mb-6 tracking-wide leading-normal;
