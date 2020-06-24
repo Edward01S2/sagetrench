@@ -50,7 +50,7 @@
             </div>
             
             @php
-              gravity_form($form->id, false, false, false, '', true, 2);
+              gravity_form($form->id, false, false, false, '', true, 50);
             @endphp
           </div>
         </div>
