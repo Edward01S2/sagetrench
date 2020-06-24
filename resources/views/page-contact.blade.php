@@ -25,11 +25,11 @@
     </div>
 
     <section id="contact" class="bg-s-yellow">
-      <div class="container mx-auto">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-s-yellow">
           <div class="flex flex-col mx-auto items-center py-16 md:w-3/4 lg:w-3/5 xl:w-1/2">
-            {{-- <h2 class="text-3xl md:text-5xl uppercase font-bold tracking-wider leading-none pb-4">{!! $contact_title !!}</h2> --}}
-            <p class="text-base px-8 text-center pb-8 md:text-xl lg:text-2xl">{!! $contact_content !!}</p>
+            <h2 class="text-3xl md:text-4xl uppercase font-bold tracking-wider leading-none pb-4">{!! $contact_title !!}</h2>
+            <div class="text-base text-center pb-8 md:pb-4 md:text-xl">{!! $contact_content !!}</div>
             @php
               gravity_form($contact_form->id, false, false, false, '', true, 1);
             @endphp

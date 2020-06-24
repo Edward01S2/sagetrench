@@ -20,7 +20,7 @@
                 {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav-primary']) !!}
               @endif
               <button class="hidden search-button outline-none focus:outline-none md:block">
-                <svg class="h-4 w-4 fill-current text-s-stone ml-2 hover:text-s-yellow outline-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/></svg>
+                <svg class="h-4 w-4 fill-current text-s-stone ml-2 hover:text-s-yellow outline-none active:outline-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/></svg>
               </button>
                 <?php get_search_form(); ?>
             </div>

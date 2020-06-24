@@ -11,6 +11,12 @@ h3 {
   @apply text-3xl font-bold tracking-wider leading-none;
 }
 
+a {
+  &:hover {
+    @apply text-s-sand;
+  }
+}
+
 @screen md {
   h3 {
     @apply text-5xl;
@@ -39,4 +45,23 @@ h3 {
 
 a {
   @apply cursor-pointer;
+}
+
+br {
+  @apply mb-2;
+}
+
+.content-markup {
+  h4 {
+    @apply text-xl font-bold mb-4;
+  }
+  ul {
+    @apply mb-4;
+  }
+  li {
+    @apply list-disc ml-4 mb-2;
+    ul {
+      @apply ml-4;
+    }
+  }
 }

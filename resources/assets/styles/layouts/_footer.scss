@@ -7,6 +7,9 @@
   }
   li {
     @apply text-center py-3;
+  }
+  .sub-menu {
+    @apply hidden;
   } 
 }
 

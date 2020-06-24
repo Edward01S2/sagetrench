@@ -74,3 +74,4 @@
   {{-- @debug --}}
 @endsection
 
+{{-- @dump($categories) --}}

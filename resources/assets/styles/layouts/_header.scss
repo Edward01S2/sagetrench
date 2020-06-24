@@ -4,7 +4,12 @@
     @apply pb-6;
   }
   li {
-    @apply py-4;
+    @apply py-4 relative;
+    &:hover {
+      .sub-menu {
+        @apply block;
+      }
+    }
   }
   .current-menu-item a{
     @apply text-s-yellow;
@@ -13,6 +18,15 @@
     @apply uppercase font-roboto font-medium text-s-stone px-6 py-4 text-base tracking-widest;
     &:hover {
       @apply text-s-yellow;
+    }
+  }
+  .sub-menu{
+    @apply mt-4;
+    li {
+      @apply py-2;
+      a {
+        @apply capitalize text-sm py-2;
+      }
     }
   }
 }
@@ -32,11 +46,20 @@
 @screen md {
   .nav-primary {
     @apply flex flex-row items-center;
+    > * + * {
+      @apply ml-4;
+    }
     & li:last-child {
       @apply pr-0 pb-4;
     }
+    li {
+      @apply relative;
+    }
     a {
-      @apply px-3 text-sm;
+      @apply px-4 text-sm;
+    }
+    .sub-menu {
+      @apply hidden absolute w-64 bg-gray-100 text-left px-0 border-l-4 border-s-dark shadow rounded-sm;
     }
   }
 }

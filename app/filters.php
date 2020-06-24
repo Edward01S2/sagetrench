@@ -184,3 +184,48 @@ add_action( 'pre_get_posts', function ( $query ) {
 add_filter('get_search_form', function () {
     return \App\template( 'partials.search-form-header' );
 });
+
+function my_theme_doctors_menu_filter( $items, $menu, $args ) {
+    $child_items = array(); // here, we will add all items for the single posts
+    $menu_order = count($items); // this is required, to make sure it doesn't push out other menu items
+    $parent_item_id = 0; // we will use this variable to identify the parent menu item
+    $rand_id = 999923;
+  
+    //First, we loop through all menu items to find the one we want to be the parent of the sub-menu with all the posts.
+    foreach ( $items as $item ) {
+      if ( in_array('parent-products', $item->classes) ){
+          $parent_item_id = $item->ID;
+      }
+    }
+
+    $cats = get_terms('category');
+  
+    if($parent_item_id > 0){
+  
+        foreach ( $cats as $cat ) {
+            $post = new \stdClass();
+            $post->menu_item_parent = $parent_item_id;
+            $post->post_type = 'nav_menu_item';
+            $post->object = 'custom';
+            $post->type = 'custom';
+            $post->menu_order = ++$menu_order;
+            $post->title = $cat->name;
+            $post->url = '/products/#' . $cat->slug;
+            $post->ID = 0;
+            $post->db_id = 0;
+            $post->object_id = 0;
+            $post->classes = array();
+            $post->xfn = '';
+            $post->target = '';
+            $post->attr_title = '';
+            $post->description = '';
+            array_push($child_items, $post);
+
+        }
+  
+    }
+  
+    return array_merge( $items, $child_items );
+  }
+
+  add_filter( 'wp_get_nav_menu_items', __NAMESPACE__ . '\\my_theme_doctors_menu_filter', 10, 3 );

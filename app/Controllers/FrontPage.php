@@ -27,6 +27,10 @@ class FrontPage extends Controller
     }, get_field('service') ?? []);
    }
 
+   public function categories() {
+      return get_categories();
+   }
+
    // public function categories() {
    //    $cats = get_terms('category');
     
