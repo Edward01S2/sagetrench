@@ -11,8 +11,18 @@
       }
     }
   }
-  .current-menu-item a{
-    @apply text-s-yellow;
+  .current-menu-item {
+    a {
+      @apply text-s-yellow;
+    }
+    .sub-menu {
+      a {
+        @apply text-s-stone;
+        &:hover {
+          @apply text-s-yellow;
+        }
+      }
+    }
   }
   a {
     @apply uppercase font-roboto font-medium text-s-stone px-6 py-4 text-base tracking-widest;

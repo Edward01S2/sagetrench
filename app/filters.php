@@ -220,7 +220,7 @@ function my_theme_doctors_menu_filter( $items, $menu, $args ) {
             $post->attr_title = '';
             $post->description = '';
 
-            if($cat->name === 'Rental Pump') {
+            if($cat->name === 'Rental Pumps') {
                 $post->url = 'https://www.sagepump.com/';
                 $post->target = "_blank";
             }
