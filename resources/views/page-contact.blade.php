@@ -5,16 +5,16 @@
     <section id="hero">
       <div class="" style="background: center / cover url('{!! App::featImage() !!}')">
         <div class="container mx-auto flex justify-center items-center px-8">
-          <h2 class="text-4xl leading-tight lg:text-5xl font-medium py-16 md:py-24 lg:py-28 xl:py-32">{!! $title !!}</h2>
+          <h2 class="text-4xl leading-tight lg:text-5xl font-medium py-16 md:py-12 lg:py-28 xl:py-32">{!! $title !!}</h2>
         </div>
       </div>
     </section>
 
   
     <div class="container mx-auto px-8 -mt-8 md:-mt-10 pb-16">
-      <div class="page-contact bg-white flex flex-col text-center pt-8 pb-4 lg:max-w-3xl lg:mx-auto">
+      <div class="page-contact bg-white flex flex-col text-center pt-8 pb-4 lg:max-w-5xl lg:mx-auto">
         <h2 class="uppercase text-2xl font-medium pb-4 tracking-wider xl:text-3xl">Locations:</h2>
-        <div class="md:flex md:justify-between md:text-left md:px-24 lg:py-4">
+        <div class="md:flex md:justify-center md:space-x-8 md:text-center md:px-8 lg:py-4 lg:space-x-16 xl:space-x-20">
           @foreach($locations as $loc)
             <div class="contact-location pb-8">
               {!! $loc->location !!}
