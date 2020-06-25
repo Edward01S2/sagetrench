@@ -29,6 +29,7 @@ class ArchiveProducts extends Controller
             'name' => get_the_title($post->ID),
             'link' => get_the_permalink($post->ID),
             'image' => get_the_post_thumbnail_url($post->ID),
+            'external' => get_field('external_url', $post->ID),
           ];
 
 

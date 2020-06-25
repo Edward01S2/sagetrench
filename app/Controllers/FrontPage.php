@@ -13,6 +13,7 @@ class FrontPage extends Controller
       return [
          'cat' => $product['category'] ?? null,
          'image' => $product['image'] ?? null,
+         'url' => $product['external_url'] ?? null,
       ];
    }, get_field('product') ?? []);
   }

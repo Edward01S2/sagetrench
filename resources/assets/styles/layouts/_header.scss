@@ -1,7 +1,7 @@
 .nav-primary {
   @apply flex flex-col;
   & li:last-child {
-    @apply pb-6;
+    @apply mb-4;
   }
   li {
     @apply py-4 relative;
@@ -29,6 +29,14 @@
       }
     }
   }
+  .product-catalog {
+    a {
+      @apply bg-s-dark inline-block text-white;
+      &:hover {
+        @apply opacity-75 text-white;
+      }
+    }
+  }
 }
 
 .search-form {
@@ -50,7 +58,7 @@
       @apply ml-4;
     }
     & li:last-child {
-      @apply pr-0 pb-4;
+      @apply pr-0 pb-4 mb-0;
     }
     li {
       @apply relative;
@@ -60,6 +68,25 @@
     }
     .sub-menu {
       @apply hidden absolute w-64 bg-gray-100 text-left px-0 border-l-4 border-s-dark shadow rounded-sm;
+    }
+    .product-catalog {
+      @apply relative;
+      a {
+        @apply mb-0 py-3 relative;
+      }
+      &:before {
+        @apply text-white;
+        position: absolute;
+        content: "";
+        background: url('../images/download.svg');
+        height: 20px;
+        width: 20px;
+        top: 18px;
+        left: 10px;
+        z-index:50;
+        pointer-events: none;
+        display: block;
+      }
     }
   }
 }

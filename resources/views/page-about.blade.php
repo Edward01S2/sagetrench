@@ -7,7 +7,7 @@
         <div class="py-16 md:py-24 lg:py-28 xl:py-32">
           <h2 class="text-4xl leading-tight lg:text-5xl font-medium mb-8">{!! $title !!}</h2>
           <div class="text-center">
-            <a class="bg-s-stone text-white text-lg font-bold rounded-sm border shadow-md border-s-stone px-8 py-3 hover:bg-s-yellow hover:text-s-dark lg:text-xl xl:text-2xl" href="{!! $cta->link !!}">{!! $cta->title !!}</a>
+            <a class="bg-s-stone text-white text-lg font-bold rounded-sm border shadow-md border-s-stone px-8 py-3 hover:bg-s-yellow hover:text-s-dark lg:text-xl xl:text-2xl" href="{!! $cta->url !!}">{!! $cta->title !!}</a>
           </div>
         </div>
       </div>

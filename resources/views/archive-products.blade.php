@@ -19,7 +19,11 @@
       <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {{-- @dump($post['posts']) --}}
         @foreach($post['posts'] as $shore)
-          <a class="" href="{!! $shore['link'] !!}">
+          @if($shore['external'])
+            <a class="" target="_blank" href="{!! $shore['external'] !!}">
+          @else
+            <a class="" href="{!! $shore['link'] !!}">
+          @endif
             <div class="group">
               <img class="pb-4 object-cover h-72 object-center w-full group-hover:opacity-75" src="{!! $shore['image'] !!}" alt="">
               <p class="uppercase text-center font-medium tracking-wide group-hover:text-s-yellow">{!! $shore['name'] !!}</p>

@@ -219,6 +219,12 @@ function my_theme_doctors_menu_filter( $items, $menu, $args ) {
             $post->target = '';
             $post->attr_title = '';
             $post->description = '';
+
+            if($cat->name === 'Rental Pump') {
+                $post->url = 'https://www.sagepump.com/';
+                $post->target = "_blank";
+            }
+
             array_push($child_items, $post);
 
         }
