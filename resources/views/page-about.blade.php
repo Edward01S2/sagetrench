@@ -42,6 +42,16 @@
     </div>
   </div>
 
+  <div class="bg-cover bg-center" style="background-image:url('{!! $content->quote_bg->url !!}');">
+    <div class="container mx-auto px-4 py-12 text-center md:max-w-2xl md:mx-auto md:py-16 xl:py-24">
+      <h3 class="uppercase mb-4 md:text-4xl md:mb-8">{!! $content->quote_title !!}</h3>
+      <div class="text-center bg-s-yellow p-4 md:p-8 lg:text-lg lg:p-12">
+        <p class="md:mb-2">{!! $content->quote_text !!}</p>
+        <div class="font-bold italic">{!! $content->quote_author !!}</div>
+      </div>
+    </div>
+  </div>
+
   <div class="bg-s-yellow">
     <div class="container mx-auto">
       <p class="py-12 px-8 lg:px-32 text-center text-xl md:text-lg lg:text-xl">{!! $pre_footer_text !!}</p>
