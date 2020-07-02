@@ -65,7 +65,8 @@ module.exports = {
         /^ginput/,
         /^field/,
         /^ginput_container/,
-        /^nav-primary/
+        /^nav-primary/,
+        /^ctct-form/,
       ],
       rejected: true
     })

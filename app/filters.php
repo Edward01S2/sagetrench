@@ -235,3 +235,15 @@ function my_theme_doctors_menu_filter( $items, $menu, $args ) {
   }
 
   add_filter( 'wp_get_nav_menu_items', __NAMESPACE__ . '\\my_theme_doctors_menu_filter', 10, 3 );
+
+//   add_filter( 'gform_confirmation_4', function ( $confirmation, $form, $entry, $ajax ) {
+//     \GFCommon::log_debug( __METHOD__ . '(): running.' );
+//     if ( isset( $confirmation['redirect'] ) ) {
+//         $url          = esc_url_raw( $confirmation['redirect'] );
+//         \GFCommon::log_debug( __METHOD__ . '(): Redirect to URL: ' . $url );
+//         // $confirmation = 'Thanks for contacting us! We will get in touch with you shortly.';
+//         $confirmation = "<script type=\"text/javascript\">window.open('$url', '_blank');</script>";
+//     }
+ 
+//     return $confirmation;
+// }, 10, 4 );

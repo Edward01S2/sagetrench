@@ -1,3 +1,4 @@
+/* purgecss start ignore */
 //Homepage
 .about-content {
   h3 {
@@ -189,4 +190,20 @@
   }
 }
 
+//POPUP STYLES
+.ctct-form-button {
+  @apply font-bold tracking-widest #{!important};
+}
 
+.ctct-form-success {
+  @apply text-center py-8 #{!important};
+}
+
+.popup-button {
+  @apply inline-block bg-s-dark text-white px-6 py-4 font-bold tracking-wider uppercase #{!important};
+  &:hover {
+    @apply opacity-75;
+  }
+}
+
+/* purgecss end ignore */
